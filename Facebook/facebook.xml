@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Facebook Logo -->
+            <ImageView
+                android:id="@+id/fbView"
+                android:layout_width="200dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo"
+                android:contentDescription="Facebook Logo" />
+
+            <!-- Post -->
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="281dp"
+                android:src="@drawable/post"
+                android:contentDescription="Facebook Post" />
+
+            <!-- Like, Comment and Share -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                app:columnCount="3"
+                app:rowCount="1">
+
+                <!-- Like -->
+                <ImageView
+                    android:id="@+id/likeView"
+                    android:layout_width="110dp"
+                    android:layout_height="83dp"
+                    android:clickable="true"
+                    android:src="@drawable/like"
+                    android:contentDescription="Like"
+                    app:layout_row="0"
+                    app:layout_column="0"
+                    app:layout_gravity="center" />
+
+                <!-- Comment -->
+                <ImageView
+                    android:id="@+id/cmmntView"
+                    android:layout_width="111dp"
+                    android:layout_height="66dp"
+                    android:clickable="true"
+                    android:src="@drawable/comment"
+                    android:contentDescription="Comment"
+                    app:layout_row="0"
+                    app:layout_column="1"
+                    app:layout_gravity="center"
+                    tools:ignore="MissingClass" />
+
+                <!-- Share -->
+                <ImageView
+                    android:id="@+id/shareView"
+                    android:layout_width="93dp"
+                    android:layout_height="86dp"
+                    android:clickable="true"
+                    android:src="@drawable/share"
+                    android:contentDescription="Share"
+                    app:layout_row="0"
+                    app:layout_column="2"
+                    app:layout_gravity="center" />
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
