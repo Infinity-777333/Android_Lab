@@ -2,7 +2,6 @@
 
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,65 +21,68 @@
             <!-- Facebook Logo -->
             <ImageView
                 android:id="@+id/fbView"
-                android:layout_width="200dp"
+                android:layout_width="130dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center"
-                android:src="@drawable/logo"
-                android:contentDescription="Facebook Logo" />
+                android:contentDescription="Facebook Logo"
+                android:src="@drawable/logo" />
 
             <!-- Post -->
             <ImageView
                 android:id="@+id/imageView6"
                 android:layout_width="match_parent"
-                android:layout_height="281dp"
-                android:src="@drawable/post"
-                android:contentDescription="Facebook Post" />
+                android:layout_height="400dp"
+                android:contentDescription="Facebook Post"
+                android:src="@drawable/post" />
 
             <!-- Like, Comment and Share -->
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:layout_marginTop="40dp"
-                app:columnCount="3"
-                app:rowCount="1">
+                android:columnCount="3"
+                android:rowCount="1"
+                android:orientation="horizontal">
 
                 <!-- Like -->
                 <ImageView
                     android:id="@+id/likeView"
                     android:layout_width="110dp"
                     android:layout_height="83dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
                     android:clickable="true"
+                    android:focusable="true"
                     android:src="@drawable/like"
-                    android:contentDescription="Like"
-                    app:layout_row="0"
-                    app:layout_column="0"
-                    app:layout_gravity="center" />
+                    android:contentDescription="Like" />
 
                 <!-- Comment -->
+
+                <!-- Share -->
                 <ImageView
                     android:id="@+id/cmmntView"
                     android:layout_width="111dp"
-                    android:layout_height="66dp"
+                    android:layout_height="61dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="center"
                     android:clickable="true"
-                    android:src="@drawable/comment"
                     android:contentDescription="Comment"
-                    app:layout_row="0"
-                    app:layout_column="1"
-                    app:layout_gravity="center"
-                    tools:ignore="MissingClass" />
+                    android:focusable="true"
+                    android:src="@drawable/comment" />
 
-                <!-- Share -->
                 <ImageView
                     android:id="@+id/shareView"
                     android:layout_width="93dp"
                     android:layout_height="86dp"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_gravity="center"
                     android:clickable="true"
+                    android:focusable="true"
                     android:src="@drawable/share"
-                    android:contentDescription="Share"
-                    app:layout_row="0"
-                    app:layout_column="2"
-                    app:layout_gravity="center" />
+                    android:contentDescription="Share" />
 
             </GridLayout>
 
